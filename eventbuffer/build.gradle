@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'event-buffer'
+
+    publishedGroupId = 'org.unfoldingword.tools'
+    libraryName = 'Event Buffer'
+    artifact = 'event-buffer'
+
+    libraryDescription = 'A very simple tool for registering one-way events on objects'
+
+    siteUrl = 'https://github.com/unfoldingWord-dev/android-event-buffer'
+    gitUrl = 'https://github.com/unfoldingWord-dev/android-event-buffer.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'neutrinog'
+    developerName = 'Joel Lonbeck'
+    developerEmail = 'joel@neutrinographics.com'
+
+    licenseName = 'The MIT License (MIT)'
+    licenseUrl = 'https://opensource.org/licenses/mit-license.php'
+    allLicenses = ["MIT"]
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+}
