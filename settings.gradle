@@ -1,1 +1,1 @@
-include ':eventbuffer'
+include ':event-buffer'
